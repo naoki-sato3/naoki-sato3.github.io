@@ -142,13 +142,13 @@ span.highlight {
 }
 
 ol.pub-list {
-  padding-left: 5px;
+  padding-left: 0px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 ol.pub-list li {
-  padding: 8px 16px 16px 16px;
+  padding: 8px 16px 16px 0px;
   margin-bottom: 10px;
   vertical-align: middle;
   list-style-position: outside;
