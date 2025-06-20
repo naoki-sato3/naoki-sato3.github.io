@@ -48,6 +48,21 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+          
+<!-- Add the tab switcher under the Publications heading -->
+<table style="width:100%; border:0px; border-spacing:0px 10px; border-collapse:separate; margin-left:auto; margin-right:auto;">
+  <tbody>
+    <tr>
+      <td style="padding:16px;width:100%;vertical-align:middle">
+        <h2>
+          <span onclick="showTab('pub')" style="cursor:pointer; border-bottom: 2px solid #1772d0; margin-right: 20px;">Publications</span>
+          <span onclick="showTab('talk')" style="cursor:pointer; color:gray;">Talks</span>
+        </h2>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- Publications Heading -->
 <table style="width:100%; border:0px; border-spacing:0px 10px; border-collapse:separate; margin-left:auto; margin-right:auto;">
@@ -103,6 +118,28 @@
     <a href="data/poster_icml2023.pdf">poster</a>
   </li>
 </ol>
+
+<!-- Talks Section (initially hidden) -->
+<ol id="talk" class="pub-list" style="display:none; padding-left: 16px; margin-top: 0;">
+  <li style="padding:8px 0px;">
+    <span class="papertitle">Optimization Methods for Deep Learning</span><br>
+    <strong>Naoki Sato</strong><br>
+    <em>Invited Talk at XYZ Workshop, 2024</em><br>
+    <a href="data/slides_xyz2024.pdf">slides</a>
+  </li>
+  <!-- (more talks can be added here) -->
+</ol>
+
+<!-- JavaScript for tab switching -->
+<script>
+  function showTab(tabName) {
+    const pub = document.getElementById("pub");
+    const talk = document.getElementById("talk");
+
+    pub.style.display = tabName === "pub" ? "block" : "none";
+    talk.style.display = tabName === "talk" ? "block" : "none";
+  }
+</script>
     
   </tbody>
 </table>
