@@ -155,15 +155,16 @@ ol.pub-list li {
   font-size: 16px;
 }
 
-<style>
-  .tab {
-    cursor: pointer;
-    color: gray;
-    border-bottom: none;
-    margin-right: 20px;
-  }
-  .tab.active {
-    color: black;
-    border-bottom: 2px solid #1772d0;
-  }
-</style>
+.tabs {
+  display: inline-flex; /* or flex */
+  gap: 20px;            /* タブ同士の間隔を20pxに */
+}
+.tab {
+  cursor: pointer;
+  color: gray;
+  border-bottom: none;
+}
+.tab.active {
+  color: black;
+  border-bottom: 2px solid #1772d0;
+}
