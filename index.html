@@ -55,10 +55,10 @@
   <tbody>
     <tr>
       <td style="padding:16px;width:100%;vertical-align:middle">
-        <h2>
-          <span onclick="showTab('pub')" style="cursor:pointer; border-bottom: 2px solid #1772d0; margin-right: 20px;">Publications</span>
-          <span onclick="showTab('talk')" style="cursor:pointer; color:gray;">Talks</span>
-        </h2>
+      <h2>
+       <span id="tab-pub" class="tab active" onclick="showTab('pub')">Publications</span>
+       <span id="tab-talk" class="tab" onclick="showTab('talk')">Talks</span>
+     </h2>
       </td>
     </tr>
   </tbody>
@@ -124,10 +124,27 @@
   function showTab(tabName) {
     const pub = document.getElementById("pub");
     const talk = document.getElementById("talk");
+    const tabPub = document.getElementById("tab-pub");
+    const tabTalk = document.getElementById("tab-talk");
 
+    // 表示切り替え
     pub.style.display = tabName === "pub" ? "block" : "none";
     talk.style.display = tabName === "talk" ? "block" : "none";
+
+    // タブスタイル切り替え
+    if (tabName === "pub") {
+      tabPub.classList.add("active");
+      tabTalk.classList.remove("active");
+    } else {
+      tabTalk.classList.add("active");
+      tabPub.classList.remove("active");
+    }
   }
+
+  // ページロード時に "pub" を初期表示
+  window.onload = function () {
+    showTab("pub");
+  };
 </script>
     
   </tbody>

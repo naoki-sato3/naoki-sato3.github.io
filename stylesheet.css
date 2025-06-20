@@ -154,3 +154,16 @@ ol.pub-list li {
   list-style-position: outside;
   font-size: 16px;
 }
+
+<style>
+  .tab {
+    cursor: pointer;
+    color: gray;
+    border-bottom: none;
+    margin-right: 20px;
+  }
+  .tab.active {
+    color: black;
+    border-bottom: 2px solid #1772d0;
+  }
+</style>
