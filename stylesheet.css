@@ -155,6 +155,11 @@ ol.pub-list li {
   font-size: 16px;
 }
 
+.pub-list, .pub-list li {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 .tabs {
   display: inline-flex; /* or flex */
   gap: 30px;            /* タブ同士の間隔を20pxに */
