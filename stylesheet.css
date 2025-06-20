@@ -140,3 +140,17 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+ol.pub-list {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol.pub-list li {
+  padding: 8px 16px 16px 16px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  list-style-position: outside;
+  font-size: 14px;
+}
