@@ -277,7 +277,7 @@
     const back = document.getElementById("back");
     const tabPub = document.getElementById("tab-pub");
     const tabTalk = document.getElementById("tab-talk");
-    const tab Back = document.getElementById("tab-back");
+    const tabBack = document.getElementById("tab-back");
 
     // 表示切り替え
     pub.style.display = tabName === "pub" ? "block" : "none";
@@ -289,7 +289,7 @@
       tabPub.classList.add("active");
       tabTalk.classList.remove("active");
       tabBack.classList.remove("active");
-    } elif (tabName === "talk") {
+    } else if (tabName === "talk") {
       tabTalk.classList.add("active");
       tabPub.classList.remove("active");
       tabBack.classList.remove("active");
