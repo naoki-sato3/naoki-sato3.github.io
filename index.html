@@ -104,7 +104,7 @@
        <span id="tab-pub" class="tab active" onclick="showTab('pub')">Publications</span>
        <span id="tab-talk" class="tab" onclick="showTab('talk')">Talks</span>
        <span id="tab-back" class="tab" onclick="showTab('back')">Education &amp; Experience</span>
-       <span id="tab-back" class="tab" onclick="showTab('award')">Honors &amp; Awards</span>
+       <span id="tab-award" class="tab" onclick="showTab('award')">Honors &amp; Awards</span>
      </h2>
       </td>
     </tr>
@@ -292,17 +292,10 @@
   <h3 style="margin-bottom: 4px;">Scholarship &amp; Grants</h3>
   <ol style="margin-top: 4px; padding-left: 20px;">
   <li style="padding:6px 0px;">
-    <strong>JSPS Research Fellowship for Young Scientists (DC2)</strong><br>
-    <span style="display:block; margin-left:20px;">
-      2026.04 – 2028.03
-    </span>
+    <strong>Google Conference Scholarship (travel grants for AAAI-25)</strong><br>
   </li>
-
   <li style="padding:6px 0px;">
-    <strong>Google Conference Scholarship</strong><br>
-    <span style="display:block; margin-left:20px;">
-      AAAI Conference on Artificial Intelligence (AAAI), 2025
-    </span>
+    <strong>Google Conference Scholarship (travel grants for AAAI-25)</strong><br>
   </li>
 </ol>
 
@@ -359,15 +352,15 @@
       tabBack.classList.remove("active");
       tabAward.classList.remove("active");
     } else if (tabName === "back") {
+      tabBack.classList.add("active");
       tabPub.classList.remove("active");
       tabTalk.classList.remove("active");
-      tabBack.classList.add("active");
       tabAward.classList.remove("active");
     } else {
+      tabAward.classList.add("active");
       tabBack.classList.remove("active");
       tabTalk.classList.remove("active");
       tabPub.classList.remove("active");
-      tabAward.classList.add("active");
     }
   }
 
