@@ -103,8 +103,8 @@
       <h2 class="tabs">
        <span id="tab-pub" class="tab active" onclick="showTab('pub')">Publications</span>
        <span id="tab-talk" class="tab" onclick="showTab('talk')">Talks</span>
-       <span id="tab-back" class="tab" onclick="showTab('back')">Education & Experience</span>
-       <span id="tab-back" class="tab" onclick="showTab('back')">Honors & Awards</span>
+       <span id="tab-back" class="tab" onclick="showTab('back')">Education &amp; Experience</span>
+       <span id="tab-back" class="tab" onclick="showTab('award')">Honors &amp; Awards</span>
      </h2>
       </td>
     </tr>
@@ -284,6 +284,48 @@
       2023.04 - 2025.03<br>
       </span>
     </li>
+</div>
+
+<!-- Background Section (initially hidden) -->
+<div id="award" style="display:none; padding-left: 16px; margin-top: 0;">
+  <!-- International Conferences -->
+  <h3 style="margin-bottom: 4px;">Scholarship &amp; Grants</h3>
+  <ol style="margin-top: 4px; padding-left: 20px;">
+  <li style="padding:6px 0px;">
+    <strong>JSPS Research Fellowship for Young Scientists (DC2)</strong><br>
+    <span style="display:block; margin-left:20px;">
+      2026.04 – 2028.03
+    </span>
+  </li>
+
+  <li style="padding:6px 0px;">
+    <strong>Google Conference Scholarship</strong><br>
+    <span style="display:block; margin-left:20px;">
+      AAAI Conference on Artificial Intelligence (AAAI), 2025
+    </span>
+  </li>
+</ol>
+
+  <!-- Domestic Conferences -->
+  <h3 style="margin-top: 16px; margin-bottom: 4px;">Awards</h3>
+    <li style="padding:8px 0px;">
+      <span class="papertitle">JSPS Research Fellowship for Young Scientists (DC2)</span><br>
+      <span style="display:block; margin-left:20px;">
+      2026.04 - 2028.03 <br>
+      </span>
+    </li>
+    <li style="padding:8px 0px;">
+      <span class="papertitle">Meiji University, Research Associate</span><br>
+      <span style="display:block; margin-left:20px;">
+      2025.04 - 2026.03<br>
+      </span>
+    </li>
+    <li style="padding:8px 0px;">
+      <span class="papertitle">Meiji University, Teaching Assistant</span><br>
+      <span style="display:block; margin-left:20px;">
+      2023.04 - 2025.03<br>
+      </span>
+    </li>
 
 </div>
 
@@ -293,28 +335,39 @@
     const pub = document.getElementById("pub");
     const talk = document.getElementById("talk");
     const back = document.getElementById("back");
+    const award = document.getElementById("award");
     const tabPub = document.getElementById("tab-pub");
     const tabTalk = document.getElementById("tab-talk");
     const tabBack = document.getElementById("tab-back");
+    const tabAward = document.getElementById("tab-award");
 
     // 表示切り替え
     pub.style.display = tabName === "pub" ? "block" : "none";
     talk.style.display = tabName === "talk" ? "block" : "none";
     back.style.display = tabName === "back" ? "block" : "none";
+    award.style.display = tabName === "award" ? "block" : "none";
 
     // タブスタイル切り替え
     if (tabName === "pub") {
       tabPub.classList.add("active");
       tabTalk.classList.remove("active");
       tabBack.classList.remove("active");
+      tabAward.classList.remove("active");
     } else if (tabName === "talk") {
       tabTalk.classList.add("active");
       tabPub.classList.remove("active");
       tabBack.classList.remove("active");
-    } else {
+      tabAward.classList.remove("active");
+    } else if (tabName === "back") {
+      tabPub.classList.remove("active");
+      tabTalk.classList.remove("active");
       tabBack.classList.add("active");
+      tabAward.classList.remove("active");
+    } else {
+      tabBack.classList.remove("active");
       tabTalk.classList.remove("active");
       tabPub.classList.remove("active");
+      tabAward.classList.add("active");
     }
   }
 
