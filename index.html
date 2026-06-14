@@ -285,8 +285,10 @@
 
 <!-- Biography Section (initially hidden) -->
 <div id="bio" style="display:none; padding-left: 16px; margin-top: 0;">
-  <!-- International Conferences -->
+  
   <h3 style="margin-bottom: 4px;">Education</h3>
+  <!-- 修正：ul または ol タグで囲む（不要な左余白を消すために padding-left を調整） -->
+  <ul style="margin-top: 4px; padding-left: 20px;">
     <li style="padding:8px 0px;">
       <span class="papertitle">Ph.D. student in Computer Science</span><br>
       <span style="display:block; margin-left:20px;">
@@ -308,9 +310,11 @@
       <em>Advisor: Prof. <a href="https://iiduka.net/en/iiduka/default?redirect=1">Hideaki Iiduka</a></em>
       </span>
     </li>
+  </ul> <!-- 修正：閉じタグ -->
 
-  <!-- Domestic Conferences -->
   <h3 style="margin-top: 16px; margin-bottom: 4px;">Work Experience</h3>
+  <!-- 修正：ul または ol タグで囲む -->
+  <ul style="margin-top: 4px; padding-left: 20px;">
     <li style="padding:8px 0px;">
       <span class="papertitle">JSPS Research Fellowship for Young Scientists (DC2)</span><br>
       <span style="display:block; margin-left:20px;">
@@ -329,12 +333,14 @@
       2023.04 - 2025.03<br>
       </span>
     </li>
+  </ul> <!-- 修正：閉じタグ -->
     
-      <h3 style="margin-bottom: 4px;">Scholarship &amp; Grants</h3>
+  <h3 style="margin-bottom: 4px;">Scholarship &amp; Grants</h3>
   <ol style="margin-top: 4px; padding-left: 20px;">
-  <li style="padding:0px 0px;">
-    Google Conference Scholarship, $1500 (2025.02, travel grants for AAAI-25)<br>
-</ol>
+    <li style="padding:0px 0px;">
+      Google Conference Scholarship, $1500 (2025.02, travel grants for AAAI-25)<br>
+    </li> <!-- 💡元のコードで抜けていた </li> も補完しておくと安全です -->
+  </ol>
 
   <!-- Domestic Conferences -->
   <h3 style="margin-top: 16px; margin-bottom: 4px;">Awards</h3>
