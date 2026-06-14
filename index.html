@@ -283,7 +283,7 @@
 
 </div>
 
-<!-- Background Section (initially hidden) -->
+<!-- Biography Section (initially hidden) -->
 <div id="bio" style="display:none; padding-left: 16px; margin-top: 0;">
   <!-- International Conferences -->
   <h3 style="margin-bottom: 4px;">Education</h3>
@@ -365,7 +365,7 @@
     // 表示切り替え
     pub.style.display = tabName === "pub" ? "block" : "none";
     talk.style.display = tabName === "talk" ? "block" : "none";
-    bio = tabName === "bio" ? "block" : "none";
+    bio.style.display = tabName === "bio" ? "block" : "none";
 
     // タブスタイル切り替え
     if (tabName === "pub") {
