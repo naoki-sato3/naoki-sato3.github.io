@@ -111,8 +111,7 @@
       <h2 class="tabs">
        <span id="tab-pub" class="tab active" onclick="showTab('pub')">Publications</span>
        <span id="tab-talk" class="tab" onclick="showTab('talk')">Talks</span>
-       <span id="tab-back" class="tab" onclick="showTab('back')">Education &amp; Experience</span>
-       <span id="tab-award" class="tab" onclick="showTab('award')">Honors &amp; Awards</span>
+       <span id="tab-bio" class="tab" onclick="showTab('bio')">Biography</span>
      </h2>
       </td>
     </tr>
@@ -285,7 +284,7 @@
 </div>
 
 <!-- Background Section (initially hidden) -->
-<div id="back" style="display:none; padding-left: 16px; margin-top: 0;">
+<div id="bio" style="display:none; padding-left: 16px; margin-top: 0;">
   <!-- International Conferences -->
   <h3 style="margin-bottom: 4px;">Education</h3>
     <li style="padding:8px 0px;">
@@ -330,12 +329,8 @@
       2023.04 - 2025.03<br>
       </span>
     </li>
-</div>
-
-<!-- Background Section (initially hidden) -->
-<div id="award" style="display:none; padding-left: 16px; margin-top: 0;">
-  <!-- International Conferences -->
-  <h3 style="margin-bottom: 4px;">Scholarship &amp; Grants</h3>
+    
+      <h3 style="margin-bottom: 4px;">Scholarship &amp; Grants</h3>
   <ol style="margin-top: 4px; padding-left: 20px;">
   <li style="padding:0px 0px;">
     Google Conference Scholarship, $1500 (2025.02, travel grants for AAAI-25)<br>
@@ -362,41 +357,30 @@
   function showTab(tabName) {
     const pub = document.getElementById("pub");
     const talk = document.getElementById("talk");
-    const back = document.getElementById("back");
-    const award = document.getElementById("award");
+    const bio = document.getElementById("bio");
     const tabPub = document.getElementById("tab-pub");
     const tabTalk = document.getElementById("tab-talk");
-    const tabBack = document.getElementById("tab-back");
-    const tabAward = document.getElementById("tab-award");
+    const tabBio = document.getElementById("tab-bio");
 
     // 表示切り替え
     pub.style.display = tabName === "pub" ? "block" : "none";
     talk.style.display = tabName === "talk" ? "block" : "none";
-    back.style.display = tabName === "back" ? "block" : "none";
-    award.style.display = tabName === "award" ? "block" : "none";
+    bio = tabName === "bio" ? "block" : "none";
 
     // タブスタイル切り替え
     if (tabName === "pub") {
       tabPub.classList.add("active");
       tabTalk.classList.remove("active");
-      tabBack.classList.remove("active");
-      tabAward.classList.remove("active");
+      tabBio.classList.remove("active");
     } else if (tabName === "talk") {
       tabTalk.classList.add("active");
       tabPub.classList.remove("active");
-      tabBack.classList.remove("active");
-      tabAward.classList.remove("active");
-    } else if (tabName === "back") {
-      tabBack.classList.add("active");
-      tabPub.classList.remove("active");
-      tabTalk.classList.remove("active");
-      tabAward.classList.remove("active");
+      tabBio.classList.remove("active");
     } else {
-      tabAward.classList.add("active");
-      tabBack.classList.remove("active");
-      tabTalk.classList.remove("active");
+      tabBio.classList.add("active");
       tabPub.classList.remove("active");
-    }
+      tabTalk.classList.remove("active");
+     }
   }
 
   // ページロード時に "pub" を初期表示
